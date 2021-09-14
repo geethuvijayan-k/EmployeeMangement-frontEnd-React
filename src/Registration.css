@@ -1,0 +1,42 @@
+*{
+
+  }
+
+.registration h1{
+    font-size: 40px;
+    font-family: "Open Sans", sans-serif;
+    text-align:left;
+    margin-left:30px;
+}
+.form-group {
+        align-items: center;
+        width: fit-content;
+         display: flex;
+          align-items: center;
+        label {
+          font-size: 20px;
+        }}
+
+    .form-group label{
+    margin-left:30px;
+    margin-right: 100px;
+       width: 150px;
+       text-align:left;
+    }
+.form-group input,select{
+     margin-top: 16px;
+              width: 18em;
+              height: 37px;
+              padding: 0px 10px;
+              font-size: 16px;
+              font-family: "Open Sans", sans-serif;
+              background-color: #f3f3f3;
+              border: 0;
+              border-radius: 4px;
+              margin-bottom: 31px;
+                          }
+
+.submit,.reset{
+font-weight: bold;
+margin-right:10px;
+}
