@@ -1,11 +1,14 @@
 import './App.css';
 import Registration from './Registration';
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-    <Registration/>
-    </div>
+     <HashRouter>
+         <Registration/>
+      </HashRouter>,
+      </div>
   );
 }
 

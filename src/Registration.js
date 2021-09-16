@@ -8,7 +8,7 @@ function Registration() {
       })
 
   const [values, setValues] = useState({
-       employee_no: '', employee_name: '', joining_date: '', department: '',salary:''
+       employee_no: null, employee_name: '', joining_date: '', department: '',salary:''
     });
 
   const set = name => {
@@ -31,20 +31,15 @@ function Registration() {
         }
   }
 
-  //Link to spring boot api
-  const apiLink = "http://localhost:8081/employees";
-
-     const saveFormData = async () => {
-        const response = await fetch(`${apiLink}/add`, {
-          method: 'POST',
-          content_type:'application/json',
-          body: JSON.stringify(values)
-        });
-        if (response.status !== 200) {
-        console.log(values);
-          throw new Error(`Request failed: ${response.status}`);
-        }
-      }
+    const saveFormData= async () => fetch('http://localhost:8081/employees/add', {
+        method: 'post',
+        headers: {
+            'Accept': 'application/json',
+             'accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values),
+   })
 
     //Reset
     const reset = () => {
