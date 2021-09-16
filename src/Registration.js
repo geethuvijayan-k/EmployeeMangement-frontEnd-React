@@ -8,7 +8,7 @@ function Registration() {
       })
 
   const [values, setValues] = useState({
-       employee_no: null, employee_name: '', joining_date: '', department: '',salary:''
+       employee_no: null, name: '', joining_date: '', department: '',salary:''
     });
 
   const set = name => {
@@ -24,7 +24,7 @@ function Registration() {
           await saveFormData();
           alert('Your registration was successfully submitted!');
           setValues({
-            employee_no: '', employee_name: '', joining_date: '', department: '',salary:''
+            name: '', employee_name: '', joining_date: '', department: '',salary:''
           });
         } catch (e) {
           alert(`Registration failed! ${e.message}`);
@@ -56,7 +56,7 @@ function Registration() {
             </div>
             <div className="form-group">
                   <label>Employee Name</label>
-                  <input type="text" value={state.employee_name} required name="employeeName" placeholder="Employee Name" onChange={set('employee_name')}/>
+                  <input type="text" value={state.name} required name="employeeName" placeholder="Employee Name" onChange={set('name')}/>
             </div>
             <div className="form-group">
                    <label>Date Of Joining</label>
